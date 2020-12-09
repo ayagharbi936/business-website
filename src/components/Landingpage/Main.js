@@ -13,8 +13,12 @@ const Main = () => {
               </p>
             </section>
             <section className="hero-btn">
-            <Link to='/contact'><button className="btn-contact">Contact us</button></Link>
-            <Link to='/about'><button className="btn-learnMore">Learn more</button></Link>
+              <Link to="/contact">
+                <button className="btn-contact">Contact us</button>
+              </Link>
+              <Link to="/about">
+                <button className="btn-learnMore">Learn more</button>
+              </Link>
             </section>
           </div>
         </div>

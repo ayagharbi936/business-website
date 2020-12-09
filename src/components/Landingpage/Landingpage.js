@@ -9,10 +9,10 @@ import Navbar from "./Navbar";
 const Landingpage = () => {
   return (
     <div>
-    <Navbar/>
+      <Navbar />
       <Main />
       <AboutSection />
-      <ServicesSection/>
+      <ServicesSection />
       <NumbersSection />
       <Testimonials />
     </div>

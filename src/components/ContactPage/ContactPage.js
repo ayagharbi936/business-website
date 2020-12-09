@@ -9,7 +9,6 @@ const ContactPage = () => {
   return (
     <div>
       <ReactNotifications />
-
       <Navbar />
       <Main />
       <Form />

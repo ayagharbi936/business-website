@@ -24,7 +24,7 @@ const NumbersSection = () => {
                 <img alt="" className="icon" src={icon1} />
                 <Spring
                   to={{ number: start ? 20 : 1 }}
-                  delay="500"
+                  delay="300"
                   config={config.molasses}
                 >
                   {(props) => <p>{props.number.toFixed()}+</p>}
@@ -37,7 +37,7 @@ const NumbersSection = () => {
                 <img alt="" className="icon" src={icon2} />
                 <Spring
                   to={{ number: start ? 200 : 1 }}
-                  delay="500"
+                  delay="300"
                   config={config.molasses}
                 >
                   {(props) => <p>{props.number.toFixed()}+</p>}
@@ -50,7 +50,7 @@ const NumbersSection = () => {
                 <img alt="" className="icon" src={icon3} />
                 <Spring
                   to={{ number: start ? 100 : 1 }}
-                  delay="500"
+                  delay="300"
                   config={config.molasses}
                 >
                   {(props) => <p>{props.number.toFixed()}+</p>}

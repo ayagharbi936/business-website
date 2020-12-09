@@ -242,21 +242,25 @@ button {
   margin-bottom: 20vh;
 }
 .testimonials-container {
-  width: 70%;
-  display: flex;
-  margin: 60px auto;
+  width: 80%;
 
-  justify-content: space-between;
+  margin: 60px auto;
 }
 .testimonial-item {
   height: 300px;
-  width: 210px;
+  width: 190px;
   background-color: #fdfcfc7e;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 4px 4px 4px rgba(202, 202, 202, 0.335);
 }
+.slick-slide {
+	padding: 0 8px;
+  box-sizing: border-box;
+ 
+ }
+
 .testimonial-item .avatar {
   height: 80px;
   width: 80px;
@@ -284,12 +288,14 @@ button {
   color: #4e4a4a;
 }
 .testimonials-container .arrow {
-  height: 16px;
-  width: 10px;
+  height: 12px;
+  width: 6px;
   align-self: center;
   cursor: pointer;
 }
-
+.slick-prev:before, .slick-next:before {
+  font-size: smaller !important;
+}
 .footer {
   height: 170px;
   background-color: #2a383f;
@@ -469,7 +475,7 @@ textarea {
   height: 150px;
   width: 100%;
 }
-.error{
+.error {
   font-size: 13px;
   color: rgb(255, 0, 0);
 }
@@ -715,7 +721,9 @@ textarea {
     width: 95%;
   }
   .form-contact {
-   
+    width: 95%;
+  }
+  .testimonials-container{
     width: 95%;
   }
 }
@@ -743,10 +751,6 @@ textarea {
   .overview-about-container .overview-img img {
     display: none;
   }
-  
-  
-
-
 
   .contact-info-container {
     flex-direction: column;

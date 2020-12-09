@@ -1,10 +1,44 @@
 import React from "react";
-
-import rightArrow from "../../images/right-arrow.png";
-import leftArrow from "../../images/left-arrow.png";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Testimonials = () => {
+  let settings = {
+    infinite: true,
+    dots: true,
+    speed: 1000,
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    pauseOnHover: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 890,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const exemple = [
     {
       avatar:
@@ -46,24 +80,21 @@ const Testimonials = () => {
         <hr className="line" />
       </div>
       <div className="testimonials-container">
-        <img src={leftArrow} className="arrow" alt="" />
-
-        {exemple.map((item) => {
-          return (
-            <div className="testimonial-item">
-              <div
-                className="avatar"
-                style={{ backgroundImage: "url(" + item.avatar + ")" }}
-              />
-
-              <p className="name">{item.name}</p>
-              <p className="job">{item.job}</p>
-              <p className="testimonial">{item.testimonial}</p>
-            </div>
-          );
-        })}
-
-        <img src={rightArrow} alt="" className="arrow" />
+        <Slider {...settings}>
+          {exemple.map((item) => {
+            return (
+              <div className="testimonial-item">
+                <div
+                  className="avatar"
+                  style={{ backgroundImage: "url(" + item.avatar + ")" }}
+                />
+                <p className="name">{item.name}</p>
+                <p className="job">{item.job}</p>
+                <p className="testimonial">{item.testimonial}</p>
+              </div>
+            );
+          })}
+        </Slider>
       </div>
     </div>
   );
